@@ -24,4 +24,14 @@ public interface QuoteDao extends QuoteRepository {
     void update(Quote quote);
     @Delete
     void delete(Quote quote);
+
+    @Query("SELECT count(1) FROM Quote")
+    Integer getQuoteCount();
+
+    @Query("SELECT COUNT(1) FROM (SELECT DISTINCT source FROM Quote)")
+    Integer getDistinctSourceCount();
+
+    @Query("SELECT * FROM Quote ORDER BY id DESC LIMIT 1")
+    Quote getLastQuote();
+
 }

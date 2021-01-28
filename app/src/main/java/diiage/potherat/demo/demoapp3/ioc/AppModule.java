@@ -37,7 +37,7 @@ public class AppModule {
     @Singleton
     @Provides
     public QuotesDatabase providesDatabase(@ApplicationContext Context context){
-        return Room.inMemoryDatabaseBuilder(context, QuotesDatabase.class)
+        return Room.inMemoryDatabaseBuilder(context, QuotesDatabase.class).allowMainThreadQueries()
                 .build();
     }
 
