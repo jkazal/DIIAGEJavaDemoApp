@@ -11,4 +11,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="quote_edit">Création / Modification</string>
+
+    <string name="type_star_wars_vehicle_id">Type a star wars vehicle id.</string>
+    <string name="error">Oops! bad id</string>
 </resources>
